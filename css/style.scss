@@ -67,9 +67,23 @@ nav.nav-fixed {
 }
 
 
+.nav-scrolled {
+	background-color: transparent !important;
+	color: $blue-charcoal;
+	.nav-right {
+		svg #Artboard-Copy {
+			fill: $blue-charcoal !important;
+		}
+	}
+}
+
 nav.nav {
 	background-color: $blue-charcoal;
 	margin-bottom: 48px;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 	ul {
 		padding: 0;
 		li{
@@ -100,6 +114,10 @@ nav.nav {
 		float: left;
 		margin-top: 30px;
 		li {
+			-webkit-transition: all 0.3s ease;
+		    -moz-transition: all 0.3s ease;
+		    -o-transition: all 0.3s ease;
+		    transition: all 0.3s ease;
 			color: rgba(255,255,255,0.3);
 			transition: all ease-out 0.3s;
 			&:hover {
@@ -268,12 +286,16 @@ nav.nav {
 
 // ------projectdetail----
 
+.wrapper {
+	height: 100vh;
+}
+
+
 
 .detail-wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 100vh;
 	.project-detail-left {
 		display: inline-block;
 		width: 360px;
@@ -321,22 +343,8 @@ nav.nav {
 			}
 				
 		}
-	.wrapper-indicator {
-		position: fixed;
-		right: 48px;
-
-		.indicator {
-			margin-bottom: 24px;
-			background-color: red;
-			opacity: 0.5;
-			width: 2px;
-			height: 24px;	
-			}
-	
-		}
-		
-
 	}
+	
 
 }
 
@@ -347,6 +355,7 @@ nav.nav {
 
 
 .detail-wrapper-2 {
+	padding-top: 68px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -363,6 +372,7 @@ nav.nav {
 	}
 }
 
+
 .title {
 	color: #202428;
 	h1 {
@@ -373,13 +383,27 @@ nav.nav {
 			
 }
 
-#img-big {
-	margin-top: 180px;
+#section-4 {
+	position: relative;
+	#img-big {
+		position: absolute;
+		top: 100px;
+	}
+
 }
 
+
+
 .bottom-navigation {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 20px 0 10px 0;
 	background-color: $blue-charcoal;
-	height: 200px;
+	transition: all 0.3s ease-out;
+	.detail-wrapper-2 {
+		padding-top: 0;
+	}
 	p {
 		font-size: 10px;
 		letter-spacing: 6;
@@ -392,9 +416,31 @@ nav.nav {
 	.btm-nav-block-left {
 		display: grid;
 		width: 50%;
-		height: 100%;
+		height: 15%;
 		.prev-nav {
-			place-self: center;	
+			text-align: right;
+			place-self: center;
+			position: relative;
+			transition: all 0.25s ease-in-out;
+			opacity:0.5;
+			&:hover {
+				cursor: pointer;
+				opacity: 1;
+				position: relative;
+				margin-bottom: 24px;
+				.icn_arrow_right {
+					visibility: visible;
+					margin-right: 0px;
+					opacity: 1;
+				}
+			}
+			.icn_arrow_right {
+				visibility: hidden;
+				transition: all 0.25s ease-in-out;
+				margin-right: -15px;
+				opacity: 0;
+			}
+			
 		}
 			
 	}
@@ -402,7 +448,9 @@ nav.nav {
 		
 		display: grid;
 		width: 50%;
-		height: 100%;
+		height: 15%;
+
+
 		
 		.next-nav {
 			place-self: center;
@@ -410,6 +458,7 @@ nav.nav {
 			transition: all 0.25s ease-in-out;
 			opacity:0.5;
 			&:hover {
+				cursor: pointer;
 				opacity: 1;
 				position: relative;
 				margin-bottom: 24px;
@@ -430,6 +479,52 @@ nav.nav {
 	}
 }
 
+.hidden {
+	bottom: -100px;
+	visibility: hidden;
+}
+
+.show {
+	bottom: 0;
+	visibility: visible;
+}
+
+
+.wrapper-indicator {
+	width: 20px;
+	position: fixed;
+	right: 0px;
+	height: 100vh;
+	top: 0px;
+	display: grid;
+	padding-right: 32px;
+	z-index: 99;
+	.indicator {
+		place-self: center;
+		display: flex;
+		flex-direction: column;
+		a {
+			-webkit-transition: all 0.3s ease;
+		    -moz-transition: all 0.3s ease;
+		    -o-transition: all 0.3s ease;
+		    transition: all 0.3s ease;
+			margin-bottom: 32px;
+			background-color: white;
+			opacity: 0.3;
+			width: 4px;
+			// padding: 0 2px;
+			height: 24px;	
+			cursor: pointer;
+		}
+
+	}	
+
+}
+
+.active {
+	height: 32px !important;
+	opacity: 1 !important;
+}
 
 
 
@@ -442,8 +537,9 @@ nav.nav {
 }
 
 .c-blue-charcoal {
-	background-color: $blue-charcoal;
+	background-color: $blue-charcoal !important;
 }
+
 
 
 

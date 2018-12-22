@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_maximize</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="company-management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="organization_level1_closed_example" transform="translate(-340.000000, -370.000000)">
+            <g id="Group-8" transform="translate(296.000000, 288.000000)">
+                <g id="ic_maximize" transform="translate(44.000000, 82.000000)">
+                    <rect id="Rectangle-8" stroke="#CED2E0" fill="#FDFDFD" x="0.5" y="0.5" width="15" height="15" rx="4"></rect>
+                    <path d="M7.30999268,7.32000732 L7.30999268,4.44000732 L8.67799268,4.44000732 L8.67799268,7.32000732 L11.5579927,7.32000732 L11.5579927,8.68800732 L8.67799268,8.68800732 L8.67799268,11.5680073 L7.30999268,11.5680073 L7.30999268,8.68800732 L4.42999268,8.68800732 L4.42999268,7.32000732 L7.30999268,7.32000732 Z" id="Combined-Shape" fill="#596584"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
